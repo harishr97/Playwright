@@ -1,0 +1,11 @@
+{
+    "firstname" : "Harish",
+    "lastname" : "Automation Tester",
+    "totalprice" : 1850,
+    "depositpaid" : true,
+    "bookingdates" : {
+        "checkin" : "2026-07-20",
+        "checkout" : "2026-07-30"
+    },
+    "additionalneeds" : "Breakfast"
+}
