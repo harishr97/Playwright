@@ -1,4 +1,4 @@
-import test from '@playwright/test'
+import {test} from '@playwright/test'
 test ('Window Handelling', async ({browser})=>{
     const context=await browser.newContext()
     const page= await context.newPage()

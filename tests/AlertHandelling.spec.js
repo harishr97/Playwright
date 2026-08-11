@@ -2,7 +2,7 @@
 // confirmation alert ---> ok and cancell
 //  prompt alert ---> needs input to handle an alert
 
-import test from '@playwright/test'
+import {test} from '@playwright/test'
 
 test('Alert Handelling', async ({ page }) => {
     await page.goto('https://demo.automationtesting.in/Alerts.html')
