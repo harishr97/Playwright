@@ -1,0 +1,1139 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: DynamicWindow.spec.js >> Window Handelling
+- Location: tests\DynamicWindow.spec.js:2:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f1e3]:
+  - generic [ref=f1e7]:
+    - generic [ref=f1e9]:
+      - link [ref=f1e10] [cursor=pointer]:
+        - /url: /
+        - img "Flipkart" [ref=f1e11]
+      - link "Explore Plus" [ref=f1e12] [cursor=pointer]:
+        - /url: /plus
+    - generic [ref=f1e16]:
+      - textbox "Search for products, brands and more" [ref=f1e18]: samsung 5g mobille
+      - button [ref=f1e19] [cursor=pointer]
+    - link "Login" [ref=f1e28] [cursor=pointer]:
+      - /url: /account/login?ret=/search%3Fq%3Dsamsung%25205g%2520mobille%26otracker%3Dsearch%26otracker1%3Dsearch%26marketplace%3DFLIPKART%26as-show%3Doff%26as%3Doff
+    - link "Become a Seller" [ref=f1e30] [cursor=pointer]:
+      - /url: https://seller.flipkart.com/sell-online/?utm_source=fkwebsite&utm_medium=websitedirect
+    - generic [ref=f1e32]: More
+    - link "Cart" [ref=f1e42] [cursor=pointer]:
+      - /url: /viewcart?exploreMode=true&preference=FLIPKART
+  - generic [ref=f1e50]:
+    - generic [ref=f1e51] [cursor=pointer]: Electronics
+    - generic [ref=f1e54] [cursor=pointer]: TVs & Appliances
+    - generic [ref=f1e57] [cursor=pointer]: Men
+    - generic [ref=f1e60] [cursor=pointer]: Women
+    - generic [ref=f1e63] [cursor=pointer]: Baby & Kids
+    - generic [ref=f1e66] [cursor=pointer]: Home & Furniture
+    - generic [ref=f1e69] [cursor=pointer]: Sports, Books & More
+    - link "Flights" [ref=f1e72] [cursor=pointer]:
+      - /url: /travel/flights?otracker=nmenu_Flights
+    - link "Offer Zone" [ref=f1e73] [cursor=pointer]:
+      - /url: /offers-list/top-deals?screen=dynamic&pk=themeViews%3DDT-OMU-A2%3ADT-OMU~widgetType%3DdealCard~contentType%3Dneo&otracker=nmenu_offer-zone
+  - generic [ref=f1e74]:
+    - generic [ref=f1e75]:
+      - generic [ref=f1e77]:
+        - generic [ref=f1e79]:
+          - generic [ref=f1e80]: Filters
+          - generic [ref=f1e84]:
+            - generic [ref=f1e85]: CATEGORIES
+            - generic [ref=f1e87]:
+              - img [ref=f1e89] [cursor=pointer]
+              - link "Mobiles & Accessories" [ref=f1e91] [cursor=pointer]:
+                - /url: /mobiles-accessories/pr?sid=tyy&q=samsung+5g+mobille&otracker=categorytree
+            - generic [ref=f1e93]:
+              - img [ref=f1e95] [cursor=pointer]
+              - link "Mobiles" [ref=f1e97] [cursor=pointer]:
+                - /url: /mobiles/pr?sid=tyy,4io&q=samsung+5g+mobille&otracker=categorytree
+          - generic [ref=f1e98]:
+            - generic [ref=f1e99]: Price
+            - generic [ref=f1e108]:
+              - generic [ref=f1e109] [cursor=pointer]
+              - generic [ref=f1e116]:
+                - generic [ref=f1e117]: .
+                - generic [ref=f1e118]: .
+                - generic [ref=f1e119]: .
+                - generic [ref=f1e120]: .
+                - generic [ref=f1e121]: .
+                - generic: .
+            - generic [ref=f1e122]:
+              - combobox [ref=f1e124]:
+                - option "Min" [selected]
+                - option "₹10000"
+                - option "₹15000"
+                - option "₹20000"
+                - option "₹30000"
+              - generic [ref=f1e125]: to
+              - combobox [ref=f1e127]:
+                - option "₹10000"
+                - option "₹15000"
+                - option "₹20000"
+                - option "₹30000"
+                - option "₹30000+" [selected]
+          - generic [ref=f1e128]:
+            - generic [ref=f1e129] [cursor=pointer]: Brand
+            - generic "Samsung" [ref=f1e135] [cursor=pointer]
+          - generic [ref=f1e140]:
+            - generic [ref=f1e141] [cursor=pointer]
+            - generic [ref=f1e146]: "?"
+          - generic [ref=f1e148]: Customer Ratings
+          - generic [ref=f1e153]: GST Invoice Available
+          - generic [ref=f1e158]:
+            - generic [ref=f1e159] [cursor=pointer]: Ram
+            - generic [ref=f1e164]:
+              - generic "1 GB and Below" [ref=f1e165] [cursor=pointer]
+              - generic "1GB and Below" [ref=f1e170] [cursor=pointer]
+              - generic "2 GB" [ref=f1e175] [cursor=pointer]
+              - generic "3 GB" [ref=f1e180] [cursor=pointer]
+              - generic "4 GB" [ref=f1e185] [cursor=pointer]
+              - generic "6 GB" [ref=f1e190] [cursor=pointer]
+              - generic "8 GB and Above" [ref=f1e195] [cursor=pointer]
+          - generic [ref=f1e200]: Internal Storage
+          - generic [ref=f1e205]: Battery Capacity
+          - generic [ref=f1e210]: Screen Size
+          - generic [ref=f1e215]: Primary Camera
+          - generic [ref=f1e220]: Secondary Camera
+          - generic [ref=f1e225]: Processor Brand
+          - generic [ref=f1e230]: Speciality
+          - generic [ref=f1e235]: Resolution Type
+          - generic [ref=f1e240]: Operating System
+          - generic [ref=f1e245]: Network Type
+          - generic [ref=f1e250]: Sim Type
+          - generic [ref=f1e255]:
+            - generic [ref=f1e256] [cursor=pointer]: Offers
+            - generic [ref=f1e261]:
+              - generic "Special Price" [ref=f1e262] [cursor=pointer]
+              - generic "Buy More, Save More" [ref=f1e267] [cursor=pointer]
+          - generic [ref=f1e272]: Features
+          - generic [ref=f1e277]: Type
+          - generic [ref=f1e282]: Number of Cores
+          - generic [ref=f1e287]: Availability
+          - generic [ref=f1e292]:
+            - generic [ref=f1e293] [cursor=pointer]: Discount
+            - generic [ref=f1e298]:
+              - generic "50% or more" [ref=f1e299] [cursor=pointer]
+              - generic "40% or more" [ref=f1e304] [cursor=pointer]
+              - generic "30% or more" [ref=f1e309] [cursor=pointer]
+              - generic "20% or more" [ref=f1e314] [cursor=pointer]
+              - generic "10% or more" [ref=f1e319] [cursor=pointer]
+          - generic [ref=f1e324]: Operating System Version Name
+          - generic [ref=f1e329]: Clock Speed
+        - link "Need help? Help me decide Buying Guide" [ref=f1e335] [cursor=pointer]:
+          - /url: /buying-guide/mobiles?sid=tyy,4io&otracker=bg_from_browse_lhs
+          - generic [ref=f1e336]: Need help?
+          - generic [ref=f1e337]: Help me decide
+          - img "Buying Guide" [ref=f1e340]
+      - generic [ref=f1e341]:
+        - generic [ref=f1e344]:
+          - generic [ref=f1e345]:
+            - link "Home" [ref=f1e347] [cursor=pointer]:
+              - /url: /
+            - link "Mobiles & Accessories" [ref=f1e351] [cursor=pointer]:
+              - /url: /mobiles-accessories/pr?sid=tyy&marketplace=FLIPKART
+            - link "Mobiles" [ref=f1e355] [cursor=pointer]:
+              - /url: /mobiles/pr?sid=tyy,4io&marketplace=FLIPKART
+          - generic [ref=f1e356]: Showing 1 – 24 of 1,125 results for "samsung 5g mobile"
+          - generic [ref=f1e357]:
+            - text: Show results for
+            - link "samsung 5g mobille" [ref=f1e358] [cursor=pointer]:
+              - /url: /search?q=samsung+5g+mobille&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&augment=false
+            - text: instead
+          - generic [ref=f1e359]:
+            - generic [ref=f1e360]: Sort By
+            - generic [ref=f1e361]: Relevance
+            - generic [ref=f1e362] [cursor=pointer]: Popularity
+            - generic [ref=f1e363] [cursor=pointer]: Price -- Low to High
+            - generic [ref=f1e364] [cursor=pointer]: Price -- High to Low
+            - generic [ref=f1e365] [cursor=pointer]: Newest First
+        - link "Bestseller Samsung Galaxy F70e 5G (Limelight Green, 128 GB) Add to Compare Samsung Galaxy F70e 5G (Limelight Green, 128 GB) 4.2 8,745 Ratings & 1,031 Reviews • 4 GB RAM | 128 GB ROM | Expandable Upto 2 TB • 17.12 cm (6.74 inch) HD+ Display • 50MP + 2MP | 8MP Front Camera • 6000 mAh Li-ion Battery • Dimensity 6300 Processor • 1 Year Manufacturer Warranty for Device and 6 Months for In-Box Accessories ₹14,999 ₹18,999 21% off Top Discount of the Sale Upto ₹12,600 Off on Exchange" [ref=f1e370] [cursor=pointer]:
+          - /url: /samsung-galaxy-f70e-5g-limelight-green-128-gb/p/itmf26a013c841a6?pid=MOBHMGHQ7MHMMHJZ&lid=LSTMOBHMGHQ7MHMMHJZ6Y5PNV&marketplace=FLIPKART&q=samsung+5g+mobille&store=tyy%2F4io&spotlightTagId=default_BestsellerId_tyy%2F4io&srno=s_1_1&otracker=search&otracker1=search&fm=Search&iid=61f66cb7-14cf-4000-a863-80766f009078.MOBHMGHQ7MHMMHJZ.SEARCH&ppt=sp&ppn=sp&ssid=w79gnxzrwg0000001786541742231&qH=c5ec93b915fcfa28&ov_redirect=true
+          - generic: Bestseller
+          - generic [ref=f1e372]:
+            - img "Samsung Galaxy F70e 5G (Limelight Green, 128 GB)" [ref=f1e376]
+            - generic [ref=f1e377]: Add to Compare
+          - generic [ref=f1e387]:
+            - generic [ref=f1e388]:
+              - generic [ref=f1e389]: Samsung Galaxy F70e 5G (Limelight Green, 128 GB)
+              - generic [ref=f1e390]:
+                - generic [ref=f1e391]: "4.2"
+                - generic [ref=f1e394]: 8,745 Ratings & 1,031 Reviews
+              - list [ref=f1e397]:
+                - listitem [ref=f1e398]: • 4 GB RAM | 128 GB ROM | Expandable Upto 2 TB
+                - listitem [ref=f1e399]: • 17.12 cm (6.74 inch) HD+ Display
+                - listitem [ref=f1e400]: • 50MP + 2MP | 8MP Front Camera
+                - listitem [ref=f1e401]: • 6000 mAh Li-ion Battery
+                - listitem [ref=f1e402]: • Dimensity 6300 Processor
+                - listitem [ref=f1e403]: • 1 Year Manufacturer Warranty for Device and 6 Months for In-Box Accessories
+            - generic [ref=f1e404]:
+              - generic [ref=f1e406]:
+                - generic [ref=f1e407]: ₹14,999
+                - generic [ref=f1e408]: ₹18,999
+                - generic [ref=f1e409]: 21% off
+              - generic [ref=f1e412]: Top Discount of the Sale
+              - generic [ref=f1e416]:
+                - generic [ref=f1e417]: Upto
+                - generic [ref=f1e418]: ₹12,600
+                - generic [ref=f1e419]: Off on Exchange
+        - link "Samsung Galaxy A36 5G (Awesome Lavender, 128 GB) Add to Compare Samsung Galaxy A36 5G (Awesome Lavender, 128 GB) 4.3 3,287 Ratings & 298 Reviews • 8 GB RAM | 128 GB ROM • 17.02 cm (6.7 inch) Full HD+ Display • 50MP + 8MP | 12MP Front Camera • 5000 mAh Battery • Qualcomm Snapdragon 6 Gen 3 Processor • 1 Year Manufacturer Warranty for Device and 6 Months for In-Box Accessories ₹26,999 ₹35,999 25% off Upto ₹20,625 Off on Exchange Bank Offer" [ref=f1e424] [cursor=pointer]:
+          - /url: /samsung-galaxy-a36-5g-awesome-lavender-128-gb/p/itm5a2d339a8cc5b?pid=MOBH9RNGFN76WMFF&lid=LSTMOBH9RNGFN76WMFFRDHQVS&marketplace=FLIPKART&q=samsung+5g+mobille&store=tyy%2F4io&srno=s_1_2&otracker=search&otracker1=search&fm=organic&iid=61f66cb7-14cf-4000-a863-80766f009078.MOBH9RNGFN76WMFF.SEARCH&ppt=None&ppn=None&ssid=w79gnxzrwg0000001786541742231&qH=c5ec93b915fcfa28&ov_redirect=true
+          - generic [ref=f1e425]:
+            - img "Samsung Galaxy A36 5G (Awesome Lavender, 128 GB)" [ref=f1e429]
+            - generic [ref=f1e430]: Add to Compare
+          - generic [ref=f1e440]:
+            - generic [ref=f1e441]:
+              - generic [ref=f1e442]: Samsung Galaxy A36 5G (Awesome Lavender, 128 GB)
+              - generic [ref=f1e443]:
+                - generic [ref=f1e444]: "4.3"
+                - generic [ref=f1e447]: 3,287 Ratings & 298 Reviews
+              - list [ref=f1e450]:
+                - listitem [ref=f1e451]: • 8 GB RAM | 128 GB ROM
+                - listitem [ref=f1e452]: • 17.02 cm (6.7 inch) Full HD+ Display
+                - listitem [ref=f1e453]: • 50MP + 8MP | 12MP Front Camera
+                - listitem [ref=f1e454]: • 5000 mAh Battery
+                - listitem [ref=f1e455]: • Qualcomm Snapdragon 6 Gen 3 Processor
+                - listitem [ref=f1e456]: • 1 Year Manufacturer Warranty for Device and 6 Months for In-Box Accessories
+            - generic [ref=f1e457]:
+              - generic [ref=f1e459]:
+                - generic [ref=f1e460]: ₹26,999
+                - generic [ref=f1e461]: ₹35,999
+                - generic [ref=f1e462]: 25% off
+              - generic [ref=f1e466]:
+                - generic [ref=f1e467]: Upto
+                - generic [ref=f1e468]: ₹20,625
+                - generic [ref=f1e469]: Off on Exchange
+              - generic [ref=f1e470]: Bank Offer
+        - link "Samsung Galaxy F70e 5G (Spotlight Blue, 128 GB) Add to Compare Samsung Galaxy F70e 5G (Spotlight Blue, 128 GB) 4.2 6,697 Ratings & 736 Reviews • 6 GB RAM | 128 GB ROM | Expandable Upto 2 TB • 17.12 cm (6.74 inch) HD+ Display • 50MP + 2MP | 8MP Front Camera • 6000 mAh Li-ion Battery • Dimensity 6300 Processor • 1 Year Manufacturer Warranty for Device and 6 Months for In-Box Accessories ₹16,999 ₹20,999 19% off Upto ₹12,600 Off on Exchange Bank Offer" [ref=f1e477] [cursor=pointer]:
+          - /url: /samsung-galaxy-f70e-5g-spotlight-blue-128-gb/p/itm639bb81aa42d9?pid=MOBHMGHQF8KKB99Q&lid=LSTMOBHMGHQF8KKB99QTPHLVT&marketplace=FLIPKART&q=samsung+5g+mobille&store=tyy%2F4io&spotlightTagId=default_BestsellerId_tyy%2F4io&srno=s_1_3&otracker=search&otracker1=search&fm=organic&iid=61f66cb7-14cf-4000-a863-80766f009078.MOBHMGHQF8KKB99Q.SEARCH&ppt=None&ppn=None&ssid=w79gnxzrwg0000001786541742231&qH=c5ec93b915fcfa28&ov_redirect=true
+          - generic [ref=f1e478]:
+            - img "Samsung Galaxy F70e 5G (Spotlight Blue, 128 GB)" [ref=f1e482]
+            - generic [ref=f1e483]: Add to Compare
+          - generic [ref=f1e493]:
+            - generic [ref=f1e494]:
+              - generic [ref=f1e495]: Samsung Galaxy F70e 5G (Spotlight Blue, 128 GB)
+              - generic [ref=f1e496]:
+                - generic [ref=f1e497]: "4.2"
+                - generic [ref=f1e500]: 6,697 Ratings & 736 Reviews
+              - list [ref=f1e503]:
+                - listitem [ref=f1e504]: • 6 GB RAM | 128 GB ROM | Expandable Upto 2 TB
+                - listitem [ref=f1e505]: • 17.12 cm (6.74 inch) HD+ Display
+                - listitem [ref=f1e506]: • 50MP + 2MP | 8MP Front Camera
+                - listitem [ref=f1e507]: • 6000 mAh Li-ion Battery
+                - listitem [ref=f1e508]: • Dimensity 6300 Processor
+                - listitem [ref=f1e509]: • 1 Year Manufacturer Warranty for Device and 6 Months for In-Box Accessories
+            - generic [ref=f1e510]:
+              - generic [ref=f1e512]:
+                - generic [ref=f1e513]: ₹16,999
+                - generic [ref=f1e514]: ₹20,999
+                - generic [ref=f1e515]: 19% off
+              - generic [ref=f1e519]:
+                - generic [ref=f1e520]: Upto
+                - generic [ref=f1e521]: ₹12,600
+                - generic [ref=f1e522]: Off on Exchange
+              - generic [ref=f1e523]: Bank Offer
+        - link "Samsung M06 5G (Blazing Black, 128 GB) Add to Compare Samsung M06 5G (Blazing Black, 128 GB) 4.1 5,058 Ratings & 341 Reviews • 4 GB RAM | 128 GB ROM • 17.02 cm (6.7 inch) Display • 50MP Rear Camera • 5000 mAh Battery • 1 Year Manufacturer Warranty for Phone and 6 Months Warranty for In the Box Accessories ₹14,429 ₹16,999 15% off Only few left Bank Offer" [ref=f1e530] [cursor=pointer]:
+          - /url: /samsung-m06-5g-blazing-black-128-gb/p/itmcafa42dadc15c?pid=MOBH9UYF4GZXGWW6&lid=LSTMOBH9UYF4GZXGWW6B69LOR&marketplace=FLIPKART&q=samsung+5g+mobille&store=tyy%2F4io&srno=s_1_4&otracker=search&otracker1=search&fm=organic&iid=61f66cb7-14cf-4000-a863-80766f009078.MOBH9UYF4GZXGWW6.SEARCH&ppt=None&ppn=None&ssid=w79gnxzrwg0000001786541742231&qH=c5ec93b915fcfa28&ov_redirect=true
+          - generic [ref=f1e531]:
+            - img "Samsung M06 5G (Blazing Black, 128 GB)" [ref=f1e535]
+            - generic [ref=f1e536]: Add to Compare
+          - generic [ref=f1e546]:
+            - generic [ref=f1e547]:
+              - generic [ref=f1e548]: Samsung M06 5G (Blazing Black, 128 GB)
+              - generic [ref=f1e549]:
+                - generic [ref=f1e550]: "4.1"
+                - generic [ref=f1e553]: 5,058 Ratings & 341 Reviews
+              - list [ref=f1e556]:
+                - listitem [ref=f1e557]: • 4 GB RAM | 128 GB ROM
+                - listitem [ref=f1e558]: • 17.02 cm (6.7 inch) Display
+                - listitem [ref=f1e559]: • 50MP Rear Camera
+                - listitem [ref=f1e560]: • 5000 mAh Battery
+                - listitem [ref=f1e561]: • 1 Year Manufacturer Warranty for Phone and 6 Months Warranty for In the Box Accessories
+            - generic [ref=f1e562]:
+              - generic [ref=f1e564]:
+                - generic [ref=f1e565]: ₹14,429
+                - generic [ref=f1e566]: ₹16,999
+                - generic [ref=f1e567]: 15% off
+              - generic [ref=f1e570]: Only few left
+              - generic [ref=f1e573]: Bank Offer
+        - link "Samsung Galaxy M32 5G (Sky Blue, 128 GB) Add to Compare Samsung Galaxy M32 5G (Sky Blue, 128 GB) 4.1 1,547 Ratings & 85 Reviews • 8 GB RAM | 128 GB ROM | Expandable Upto 1 TB • 16.51 cm (6.5 inch) HD+ Display • 48MP + 8MP + 5MP + 2MP | 13MP Front Camera • 5000 mAh Battery • Dimensity 720 5G Processor • 1 Year Warranty Provided by the Manufacturer from Date of Purchase ₹21,999 ₹25,999 15% off Only 3 left Bank Offer" [ref=f1e580] [cursor=pointer]:
+          - /url: /samsung-galaxy-m32-5g-sky-blue-128-gb/p/itmd9a8bb8647f12?pid=MOBG73CKDGXWGS43&lid=LSTMOBG73CKDGXWGS432UUHEW&marketplace=FLIPKART&q=samsung+5g+mobille&store=tyy%2F4io&srno=s_1_5&otracker=search&otracker1=search&fm=organic&iid=61f66cb7-14cf-4000-a863-80766f009078.MOBG73CKDGXWGS43.SEARCH&ppt=None&ppn=None&ssid=w79gnxzrwg0000001786541742231&qH=c5ec93b915fcfa28&ov_redirect=true
+          - generic [ref=f1e581]:
+            - img "Samsung Galaxy M32 5G (Sky Blue, 128 GB)" [ref=f1e585]
+            - generic [ref=f1e586]: Add to Compare
+          - generic [ref=f1e596]:
+            - generic [ref=f1e597]:
+              - generic [ref=f1e598]: Samsung Galaxy M32 5G (Sky Blue, 128 GB)
+              - generic [ref=f1e599]:
+                - generic [ref=f1e600]: "4.1"
+                - generic [ref=f1e603]: 1,547 Ratings & 85 Reviews
+              - list [ref=f1e606]:
+                - listitem [ref=f1e607]: • 8 GB RAM | 128 GB ROM | Expandable Upto 1 TB
+                - listitem [ref=f1e608]: • 16.51 cm (6.5 inch) HD+ Display
+                - listitem [ref=f1e609]: • 48MP + 8MP + 5MP + 2MP | 13MP Front Camera
+                - listitem [ref=f1e610]: • 5000 mAh Battery
+                - listitem [ref=f1e611]: • Dimensity 720 5G Processor
+                - listitem [ref=f1e612]: • 1 Year Warranty Provided by the Manufacturer from Date of Purchase
+            - generic [ref=f1e613]:
+              - generic [ref=f1e615]:
+                - generic [ref=f1e616]: ₹21,999
+                - generic [ref=f1e617]: ₹25,999
+                - generic [ref=f1e618]: 15% off
+              - generic [ref=f1e619]: Only 3 left
+              - generic [ref=f1e622]: Bank Offer
+        - link "Samsung Galaxy M06 5G (Blazing Black, 64 GB) Add to Compare Samsung Galaxy M06 5G (Blazing Black, 64 GB) 4.2 1,433 Ratings & 104 Reviews • 4 GB RAM | 64 GB ROM • 17.02 cm (6.7 inch) Display • 50MP Rear Camera • 5000 mAh Battery • 1 Year Manufacturer Warranty for Phone and 6 Months Warranty for In the Box Accessories ₹13,587 ₹14,999 9% off Only few left Bank Offer" [ref=f1e629] [cursor=pointer]:
+          - /url: /samsung-galaxy-m06-5g-blazing-black-64-gb/p/itm0c7e356cd6ad6?pid=MOBHDEYCZHZJWCNH&lid=LSTMOBHDEYCZHZJWCNHATV8ES&marketplace=FLIPKART&q=samsung+5g+mobille&store=tyy%2F4io&srno=s_1_6&otracker=search&otracker1=search&fm=organic&iid=61f66cb7-14cf-4000-a863-80766f009078.MOBHDEYCZHZJWCNH.SEARCH&ppt=None&ppn=None&ssid=w79gnxzrwg0000001786541742231&qH=c5ec93b915fcfa28&ov_redirect=true
+          - generic [ref=f1e630]:
+            - img "Samsung Galaxy M06 5G (Blazing Black, 64 GB)" [ref=f1e634]
+            - generic [ref=f1e635]: Add to Compare
+          - generic [ref=f1e645]:
+            - generic [ref=f1e646]:
+              - generic [ref=f1e647]: Samsung Galaxy M06 5G (Blazing Black, 64 GB)
+              - generic [ref=f1e648]:
+                - generic [ref=f1e649]: "4.2"
+                - generic [ref=f1e652]: 1,433 Ratings & 104 Reviews
+              - list [ref=f1e655]:
+                - listitem [ref=f1e656]: • 4 GB RAM | 64 GB ROM
+                - listitem [ref=f1e657]: • 17.02 cm (6.7 inch) Display
+                - listitem [ref=f1e658]: • 50MP Rear Camera
+                - listitem [ref=f1e659]: • 5000 mAh Battery
+                - listitem [ref=f1e660]: • 1 Year Manufacturer Warranty for Phone and 6 Months Warranty for In the Box Accessories
+            - generic [ref=f1e661]:
+              - generic [ref=f1e663]:
+                - generic [ref=f1e664]: ₹13,587
+                - generic [ref=f1e665]: ₹14,999
+                - generic [ref=f1e666]: 9% off
+              - generic [ref=f1e669]: Only few left
+              - generic [ref=f1e672]: Bank Offer
+        - link "Samsung M06 5G (Sage Green, 128 GB) Add to Compare Samsung M06 5G (Sage Green, 128 GB) 4.1 5,058 Ratings & 341 Reviews • 4 GB RAM | 128 GB ROM • 17.02 cm (6.7 inch) Display • 50MP Rear Camera • 5000 mAh Battery • 1 Year Manufacturer Warranty for Phone and 6 Months Warranty for In the Box Accessories ₹14,175 ₹16,999 16% off Only 4 left Bank Offer" [ref=f1e679] [cursor=pointer]:
+          - /url: /samsung-m06-5g-sage-green-128-gb/p/itmcafa42dadc15c?pid=MOBH9UYFYVNKR3HR&lid=LSTMOBH9UYFYVNKR3HRDRLYWS&marketplace=FLIPKART&q=samsung+5g+mobille&store=tyy%2F4io&srno=s_1_7&otracker=search&otracker1=search&fm=organic&iid=61f66cb7-14cf-4000-a863-80766f009078.MOBH9UYFYVNKR3HR.SEARCH&ppt=None&ppn=None&ssid=w79gnxzrwg0000001786541742231&qH=c5ec93b915fcfa28&ov_redirect=true
+          - generic [ref=f1e680]:
+            - img "Samsung M06 5G (Sage Green, 128 GB)" [ref=f1e684]
+            - generic [ref=f1e685]: Add to Compare
+          - generic [ref=f1e695]:
+            - generic [ref=f1e696]:
+              - generic [ref=f1e697]: Samsung M06 5G (Sage Green, 128 GB)
+              - generic [ref=f1e698]:
+                - generic [ref=f1e699]: "4.1"
+                - generic [ref=f1e702]: 5,058 Ratings & 341 Reviews
+              - list [ref=f1e705]:
+                - listitem [ref=f1e706]: • 4 GB RAM | 128 GB ROM
+                - listitem [ref=f1e707]: • 17.02 cm (6.7 inch) Display
+                - listitem [ref=f1e708]: • 50MP Rear Camera
+                - listitem [ref=f1e709]: • 5000 mAh Battery
+                - listitem [ref=f1e710]: • 1 Year Manufacturer Warranty for Phone and 6 Months Warranty for In the Box Accessories
+            - generic [ref=f1e711]:
+              - generic [ref=f1e713]:
+                - generic [ref=f1e714]: ₹14,175
+                - generic [ref=f1e715]: ₹16,999
+                - generic [ref=f1e716]: 16% off
+              - generic [ref=f1e719]: Only 4 left
+              - generic [ref=f1e722]: Bank Offer
+        - link "Samsung Galaxy M17e (Vibe Violet, 128 GB) Add to Compare Samsung Galaxy M17e (Vibe Violet, 128 GB) 4 651 Ratings & 58 Reviews • 4 GB RAM | 128 GB ROM | Expandable Upto 128 GB • 17.02 cm (6.7 inch) Full HD+ Display • 50MP Rear Camera | 2MP Front Camera • 6000 mAh Battery • MediaTek Dimensity Processor • 1-year manufacturer warranty for the device and 6 months for in-box accessories. ₹15,144 ₹18,999 20% off Only few left Upto ₹12,600 Off on Exchange" [ref=f1e729] [cursor=pointer]:
+          - /url: /samsung-galaxy-m17e-vibe-violet-128-gb/p/itm1b5a0ea459581?pid=MOBHHQUDATUWHVGA&lid=LSTMOBHHQUDATUWHVGA2BANBI&marketplace=FLIPKART&q=samsung+5g+mobille&store=tyy%2F4io&srno=s_1_8&otracker=search&otracker1=search&fm=organic&iid=61f66cb7-14cf-4000-a863-80766f009078.MOBHHQUDATUWHVGA.SEARCH&ppt=None&ppn=None&ssid=w79gnxzrwg0000001786541742231&qH=c5ec93b915fcfa28&ov_redirect=true
+          - generic [ref=f1e730]:
+            - img "Samsung Galaxy M17e (Vibe Violet, 128 GB)" [ref=f1e734]
+            - generic [ref=f1e735]: Add to Compare
+          - generic [ref=f1e745]:
+            - generic [ref=f1e746]:
+              - generic [ref=f1e747]: Samsung Galaxy M17e (Vibe Violet, 128 GB)
+              - generic [ref=f1e748]:
+                - generic [ref=f1e749]: "4"
+                - generic [ref=f1e752]: 651 Ratings & 58 Reviews
+              - list [ref=f1e755]:
+                - listitem [ref=f1e756]: • 4 GB RAM | 128 GB ROM | Expandable Upto 128 GB
+                - listitem [ref=f1e757]: • 17.02 cm (6.7 inch) Full HD+ Display
+                - listitem [ref=f1e758]: • 50MP Rear Camera | 2MP Front Camera
+                - listitem [ref=f1e759]: • 6000 mAh Battery
+                - listitem [ref=f1e760]: • MediaTek Dimensity Processor
+                - listitem [ref=f1e761]: • 1-year manufacturer warranty for the device and 6 months for in-box accessories.
+            - generic [ref=f1e762]:
+              - generic [ref=f1e764]:
+                - generic [ref=f1e765]: ₹15,144
+                - generic [ref=f1e766]: ₹18,999
+                - generic [ref=f1e767]: 20% off
+              - generic [ref=f1e770]: Only few left
+              - generic [ref=f1e774]:
+                - generic [ref=f1e775]: Upto
+                - generic [ref=f1e776]: ₹12,600
+                - generic [ref=f1e777]: Off on Exchange
+        - link "Samsung Galaxy M17 5G (Moonlight Silver, 128 GB) Add to Compare Samsung Galaxy M17 5G (Moonlight Silver, 128 GB) 4.1 3,524 Ratings & 315 Reviews • 4 GB RAM | 128 GB ROM • 17.02 cm (6.7 inch) Display • 50MP Rear Camera • 5000 mAh Battery • 1 year manufacturer warranty for device and 6 months manufacturer warranty for in-box accessories including batteries from the date of purchase ₹16,816 ₹20,999 19% off Only 1 left Bank Offer" [ref=f1e782] [cursor=pointer]:
+          - /url: /samsung-galaxy-m17-5g-moonlight-silver-128-gb/p/itmc3b8f7b511eca?pid=MOBHGU9DUNFWUJ8W&lid=LSTMOBHGU9DUNFWUJ8W9K2S59&marketplace=FLIPKART&q=samsung+5g+mobille&store=tyy%2F4io&srno=s_1_9&otracker=search&otracker1=search&fm=organic&iid=61f66cb7-14cf-4000-a863-80766f009078.MOBHGU9DUNFWUJ8W.SEARCH&ppt=None&ppn=None&ssid=w79gnxzrwg0000001786541742231&qH=c5ec93b915fcfa28&ov_redirect=true
+          - generic [ref=f1e783]:
+            - img "Samsung Galaxy M17 5G (Moonlight Silver, 128 GB)" [ref=f1e787]
+            - generic [ref=f1e788]: Add to Compare
+          - generic [ref=f1e798]:
+            - generic [ref=f1e799]:
+              - generic [ref=f1e800]: Samsung Galaxy M17 5G (Moonlight Silver, 128 GB)
+              - generic [ref=f1e801]:
+                - generic [ref=f1e802]: "4.1"
+                - generic [ref=f1e805]: 3,524 Ratings & 315 Reviews
+              - list [ref=f1e808]:
+                - listitem [ref=f1e809]: • 4 GB RAM | 128 GB ROM
+                - listitem [ref=f1e810]: • 17.02 cm (6.7 inch) Display
+                - listitem [ref=f1e811]: • 50MP Rear Camera
+                - listitem [ref=f1e812]: • 5000 mAh Battery
+                - listitem [ref=f1e813]: • 1 year manufacturer warranty for device and 6 months manufacturer warranty for in-box accessories including batteries from the date of purchase
+            - generic [ref=f1e814]:
+              - generic [ref=f1e816]:
+                - generic [ref=f1e817]: ₹16,816
+                - generic [ref=f1e818]: ₹20,999
+                - generic [ref=f1e819]: 19% off
+              - generic [ref=f1e822]: Only 1 left
+              - generic [ref=f1e825]: Bank Offer
+        - link "Samsung M36 5G (Velvet Black / Black, 128 GB) Add to Compare Samsung M36 5G (Velvet Black / Black, 128 GB) 4.3 5,272 Ratings & 412 Reviews • 6 GB RAM | 128 GB ROM • 17.02 cm (6.7 inch) Display • 50MP Rear Camera • 5000 mAh Battery • 1 Year Warranty ₹22,198 ₹26,999 17% off Only 1 left Upto ₹18,250 Off on Exchange" [ref=f1e832] [cursor=pointer]:
+          - /url: /samsung-m36-5g-velvet-black-black-128-gb/p/itm1e7be51802033?pid=MOBHEYY2FCCGHYEM&lid=LSTMOBHEYY2FCCGHYEMPEGURF&marketplace=FLIPKART&q=samsung+5g+mobille&store=tyy%2F4io&srno=s_1_10&otracker=search&otracker1=search&fm=organic&iid=61f66cb7-14cf-4000-a863-80766f009078.MOBHEYY2FCCGHYEM.SEARCH&ppt=None&ppn=None&ssid=w79gnxzrwg0000001786541742231&qH=c5ec93b915fcfa28&ov_redirect=true
+          - generic [ref=f1e833]:
+            - img "Samsung M36 5G (Velvet Black / Black, 128 GB)" [ref=f1e837]
+            - generic [ref=f1e838]: Add to Compare
+          - generic [ref=f1e848]:
+            - generic [ref=f1e849]:
+              - generic [ref=f1e850]: Samsung M36 5G (Velvet Black / Black, 128 GB)
+              - generic [ref=f1e851]:
+                - generic [ref=f1e852]: "4.3"
+                - generic [ref=f1e855]: 5,272 Ratings & 412 Reviews
+              - list [ref=f1e858]:
+                - listitem [ref=f1e859]: • 6 GB RAM | 128 GB ROM
+                - listitem [ref=f1e860]: • 17.02 cm (6.7 inch) Display
+                - listitem [ref=f1e861]: • 50MP Rear Camera
+                - listitem [ref=f1e862]: • 5000 mAh Battery
+                - listitem [ref=f1e863]: • 1 Year Warranty
+            - generic [ref=f1e864]:
+              - generic [ref=f1e866]:
+                - generic [ref=f1e867]: ₹22,198
+                - generic [ref=f1e868]: ₹26,999
+                - generic [ref=f1e869]: 17% off
+              - generic [ref=f1e872]: Only 1 left
+              - generic [ref=f1e876]:
+                - generic [ref=f1e877]: Upto
+                - generic [ref=f1e878]: ₹18,250
+                - generic [ref=f1e879]: Off on Exchange
+        - link "Samsung Galaxy A36 5G (Awesome Lavender, 256 GB) Add to Compare Samsung Galaxy A36 5G (Awesome Lavender, 256 GB) 4.3 3,287 Ratings & 298 Reviews • 8 GB RAM | 256 GB ROM • 17.02 cm (6.7 inch) Full HD+ Display • 50MP + 8MP | 12MP Front Camera • 5000 mAh Battery • Qualcomm Snapdragon 6 Gen 3 Processor • 1 Year Manufacturer Warranty for Device and 6 Months for In-Box Accessories ₹30,999 ₹38,999 20% off Top Discount of the Sale Upto ₹22,450 Off on Exchange" [ref=f1e884] [cursor=pointer]:
+          - /url: /samsung-galaxy-a36-5g-awesome-lavender-256-gb/p/itma5b5834a73d65?pid=MOBH9RNG3KTYVZKE&lid=LSTMOBH9RNG3KTYVZKERDB4KI&marketplace=FLIPKART&q=samsung+5g+mobille&store=tyy%2F4io&srno=s_1_11&otracker=search&otracker1=search&fm=organic&iid=61f66cb7-14cf-4000-a863-80766f009078.MOBH9RNG3KTYVZKE.SEARCH&ppt=None&ppn=None&ssid=w79gnxzrwg0000001786541742231&qH=c5ec93b915fcfa28&ov_redirect=true
+          - generic [ref=f1e885]:
+            - img "Samsung Galaxy A36 5G (Awesome Lavender, 256 GB)" [ref=f1e889]
+            - generic [ref=f1e890]: Add to Compare
+          - generic [ref=f1e900]:
+            - generic [ref=f1e901]:
+              - generic [ref=f1e902]: Samsung Galaxy A36 5G (Awesome Lavender, 256 GB)
+              - generic [ref=f1e903]:
+                - generic [ref=f1e904]: "4.3"
+                - generic [ref=f1e907]: 3,287 Ratings & 298 Reviews
+              - list [ref=f1e910]:
+                - listitem [ref=f1e911]: • 8 GB RAM | 256 GB ROM
+                - listitem [ref=f1e912]: • 17.02 cm (6.7 inch) Full HD+ Display
+                - listitem [ref=f1e913]: • 50MP + 8MP | 12MP Front Camera
+                - listitem [ref=f1e914]: • 5000 mAh Battery
+                - listitem [ref=f1e915]: • Qualcomm Snapdragon 6 Gen 3 Processor
+                - listitem [ref=f1e916]: • 1 Year Manufacturer Warranty for Device and 6 Months for In-Box Accessories
+            - generic [ref=f1e917]:
+              - generic [ref=f1e919]:
+                - generic [ref=f1e920]: ₹30,999
+                - generic [ref=f1e921]: ₹38,999
+                - generic [ref=f1e922]: 20% off
+              - generic [ref=f1e925]: Top Discount of the Sale
+              - generic [ref=f1e929]:
+                - generic [ref=f1e930]: Upto
+                - generic [ref=f1e931]: ₹22,450
+                - generic [ref=f1e932]: Off on Exchange
+        - link "Samsung Galaxy M17 5G (Sapphire Black, 128 GB) Add to Compare Samsung Galaxy M17 5G (Sapphire Black, 128 GB) 4.1 3,524 Ratings & 315 Reviews • 4 GB RAM | 128 GB ROM • 17.02 cm (6.7 inch) Display • 50MP Rear Camera • 5000 mAh Battery • 1 year manufacturer warranty for device and 6 months manufacturer warranty for in-box accessories including batteries from the date of purchase ₹17,280 ₹17,999 3% off Bank Offer" [ref=f1e937] [cursor=pointer]:
+          - /url: /samsung-galaxy-m17-5g-sapphire-black-128-gb/p/itmc3b8f7b511eca?pid=MOBHGU9DRM2XDSU2&lid=LSTMOBHGU9DRM2XDSU2JFGSIP&marketplace=FLIPKART&q=samsung+5g+mobille&store=tyy%2F4io&srno=s_1_12&otracker=search&otracker1=search&fm=organic&iid=61f66cb7-14cf-4000-a863-80766f009078.MOBHGU9DRM2XDSU2.SEARCH&ppt=None&ppn=None&ssid=w79gnxzrwg0000001786541742231&qH=c5ec93b915fcfa28&ov_redirect=true
+          - generic [ref=f1e938]:
+            - img "Samsung Galaxy M17 5G (Sapphire Black, 128 GB)" [ref=f1e942]
+            - generic [ref=f1e943]: Add to Compare
+          - generic [ref=f1e953]:
+            - generic [ref=f1e954]:
+              - generic [ref=f1e955]: Samsung Galaxy M17 5G (Sapphire Black, 128 GB)
+              - generic [ref=f1e956]:
+                - generic [ref=f1e957]: "4.1"
+                - generic [ref=f1e960]: 3,524 Ratings & 315 Reviews
+              - list [ref=f1e963]:
+                - listitem [ref=f1e964]: • 4 GB RAM | 128 GB ROM
+                - listitem [ref=f1e965]: • 17.02 cm (6.7 inch) Display
+                - listitem [ref=f1e966]: • 50MP Rear Camera
+                - listitem [ref=f1e967]: • 5000 mAh Battery
+                - listitem [ref=f1e968]: • 1 year manufacturer warranty for device and 6 months manufacturer warranty for in-box accessories including batteries from the date of purchase
+            - generic [ref=f1e969]:
+              - generic [ref=f1e971]:
+                - generic [ref=f1e972]: ₹17,280
+                - generic [ref=f1e973]: ₹17,999
+                - generic [ref=f1e974]: 3% off
+              - generic [ref=f1e977]: Bank Offer
+        - link "Samsung Galaxy M06 5G (Sage Green, 64 GB) Add to Compare Samsung Galaxy M06 5G (Sage Green, 64 GB) 4.2 1,433 Ratings & 104 Reviews • 4 GB RAM | 64 GB ROM • 17.02 cm (6.7 inch) Display • 50MP Rear Camera • 5000 mAh Battery • 1 Year Manufacturer Warranty for Phone and 6 Months Warranty for In the Box Accessories ₹13,600 ₹14,999 9% off Only 1 left Bank Offer" [ref=f1e984] [cursor=pointer]:
+          - /url: /samsung-galaxy-m06-5g-sage-green-64-gb/p/itm0c7e356cd6ad6?pid=MOBHCTXH9NNZEUVH&lid=LSTMOBHCTXH9NNZEUVHNPD3RK&marketplace=FLIPKART&q=samsung+5g+mobille&store=tyy%2F4io&srno=s_1_13&otracker=search&otracker1=search&fm=organic&iid=61f66cb7-14cf-4000-a863-80766f009078.MOBHCTXH9NNZEUVH.SEARCH&ppt=None&ppn=None&ssid=w79gnxzrwg0000001786541742231&qH=c5ec93b915fcfa28&ov_redirect=true
+          - generic [ref=f1e985]:
+            - img "Samsung Galaxy M06 5G (Sage Green, 64 GB)" [ref=f1e989]
+            - generic [ref=f1e990]: Add to Compare
+          - generic [ref=f1e1000]:
+            - generic [ref=f1e1001]:
+              - generic [ref=f1e1002]: Samsung Galaxy M06 5G (Sage Green, 64 GB)
+              - generic [ref=f1e1003]:
+                - generic [ref=f1e1004]: "4.2"
+                - generic [ref=f1e1007]: 1,433 Ratings & 104 Reviews
+              - list [ref=f1e1010]:
+                - listitem [ref=f1e1011]: • 4 GB RAM | 64 GB ROM
+                - listitem [ref=f1e1012]: • 17.02 cm (6.7 inch) Display
+                - listitem [ref=f1e1013]: • 50MP Rear Camera
+                - listitem [ref=f1e1014]: • 5000 mAh Battery
+                - listitem [ref=f1e1015]: • 1 Year Manufacturer Warranty for Phone and 6 Months Warranty for In the Box Accessories
+            - generic [ref=f1e1016]:
+              - generic [ref=f1e1018]:
+                - generic [ref=f1e1019]: ₹13,600
+                - generic [ref=f1e1020]: ₹14,999
+                - generic [ref=f1e1021]: 9% off
+              - generic [ref=f1e1024]: Only 1 left
+              - generic [ref=f1e1027]: Bank Offer
+        - link "Samsung Galaxy A06 5G (Light Gray, 64 GB) Add to Compare Samsung Galaxy A06 5G (Light Gray, 64 GB) 4.1 4,466 Ratings & 327 Reviews • 4 GB RAM | 64 GB ROM | Expandable Upto 1 TB • 17.02 cm (6.7 inch) HD+ Display • 50MP + 50MP | 8MP + 2MP Dual Front Camera • 5000 mAh Battery • mediatek Processor • 1 Year Manufacturer Warranty for Device and 6 Months for In-Box Accessories ₹14,130 ₹15,499 8% off Only few left Bank Offer" [ref=f1e1034] [cursor=pointer]:
+          - /url: /samsung-galaxy-a06-5g-light-gray-64-gb/p/itmf71de68343c6b?pid=MOBH9YKVEHBDSPCF&lid=LSTMOBH9YKVEHBDSPCFGOWY1W&marketplace=FLIPKART&q=samsung+5g+mobille&store=tyy%2F4io&srno=s_1_14&otracker=search&otracker1=search&fm=organic&iid=61f66cb7-14cf-4000-a863-80766f009078.MOBH9YKVEHBDSPCF.SEARCH&ppt=None&ppn=None&ssid=w79gnxzrwg0000001786541742231&qH=c5ec93b915fcfa28&ov_redirect=true
+          - generic [ref=f1e1035]:
+            - img "Samsung Galaxy A06 5G (Light Gray, 64 GB)" [ref=f1e1039]
+            - generic [ref=f1e1040]: Add to Compare
+          - generic [ref=f1e1050]:
+            - generic [ref=f1e1051]:
+              - generic [ref=f1e1052]: Samsung Galaxy A06 5G (Light Gray, 64 GB)
+              - generic [ref=f1e1053]:
+                - generic [ref=f1e1054]: "4.1"
+                - generic [ref=f1e1057]: 4,466 Ratings & 327 Reviews
+              - list [ref=f1e1060]:
+                - listitem [ref=f1e1061]: • 4 GB RAM | 64 GB ROM | Expandable Upto 1 TB
+                - listitem [ref=f1e1062]: • 17.02 cm (6.7 inch) HD+ Display
+                - listitem [ref=f1e1063]: • 50MP + 50MP | 8MP + 2MP Dual Front Camera
+                - listitem [ref=f1e1064]: • 5000 mAh Battery
+                - listitem [ref=f1e1065]: • mediatek Processor
+                - listitem [ref=f1e1066]: • 1 Year Manufacturer Warranty for Device and 6 Months for In-Box Accessories
+            - generic [ref=f1e1067]:
+              - generic [ref=f1e1069]:
+                - generic [ref=f1e1070]: ₹14,130
+                - generic [ref=f1e1071]: ₹15,499
+                - generic [ref=f1e1072]: 8% off
+              - generic [ref=f1e1075]: Only few left
+              - generic [ref=f1e1078]: Bank Offer
+        - link "Samsung A36 5G (Dark Blue, 256 GB) Add to Compare Samsung A36 5G (Dark Blue, 256 GB) 4.3 178 Ratings & 22 Reviews • 8 GB RAM | 256 GB ROM • 17.02 cm (6.7 inch) Full HD+ Display • 50MP + 8MP | 12MP Front Camera • 5000 mAh Battery • Qualcomm Snapdragon 6 Gen 3 Processor • 1 Year Manufacturer Warranty for Device and 6 Months for In-Box Accessories ₹30,999 ₹43,999 29% off Top Discount of the Sale Bank Offer" [ref=f1e1085] [cursor=pointer]:
+          - /url: /samsung-a36-5g-dark-blue-256-gb/p/itme993b087da33a?pid=MOBHNJ8FMV7RRDBA&lid=LSTMOBHNJ8FMV7RRDBADQLXG2&marketplace=FLIPKART&q=samsung+5g+mobille&store=tyy%2F4io&srno=s_1_15&otracker=search&otracker1=search&fm=organic&iid=61f66cb7-14cf-4000-a863-80766f009078.MOBHNJ8FMV7RRDBA.SEARCH&ppt=None&ppn=None&ssid=w79gnxzrwg0000001786541742231&qH=c5ec93b915fcfa28&ov_redirect=true
+          - generic [ref=f1e1086]:
+            - img "Samsung A36 5G (Dark Blue, 256 GB)" [ref=f1e1090]
+            - generic [ref=f1e1091]: Add to Compare
+          - generic [ref=f1e1101]:
+            - generic [ref=f1e1102]:
+              - generic [ref=f1e1103]: Samsung A36 5G (Dark Blue, 256 GB)
+              - generic [ref=f1e1104]:
+                - generic [ref=f1e1105]: "4.3"
+                - generic [ref=f1e1108]: 178 Ratings & 22 Reviews
+              - list [ref=f1e1111]:
+                - listitem [ref=f1e1112]: • 8 GB RAM | 256 GB ROM
+                - listitem [ref=f1e1113]: • 17.02 cm (6.7 inch) Full HD+ Display
+                - listitem [ref=f1e1114]: • 50MP + 8MP | 12MP Front Camera
+                - listitem [ref=f1e1115]: • 5000 mAh Battery
+                - listitem [ref=f1e1116]: • Qualcomm Snapdragon 6 Gen 3 Processor
+                - listitem [ref=f1e1117]: • 1 Year Manufacturer Warranty for Device and 6 Months for In-Box Accessories
+            - generic [ref=f1e1118]:
+              - generic [ref=f1e1120]:
+                - generic [ref=f1e1121]: ₹30,999
+                - generic [ref=f1e1122]: ₹43,999
+                - generic [ref=f1e1123]: 29% off
+              - generic [ref=f1e1126]: Top Discount of the Sale
+              - generic [ref=f1e1129]: Bank Offer
+        - link "Samsung Galaxy F70e 5G (Limelight Green, 128 GB) Add to Compare Samsung Galaxy F70e 5G (Limelight Green, 128 GB) 4.2 6,697 Ratings & 736 Reviews • 6 GB RAM | 128 GB ROM | Expandable Upto 2 TB • 17.12 cm (6.74 inch) HD+ Display • 50MP + 2MP | 8MP Front Camera • 6000 mAh Li-ion Battery • Dimensity 6300 Processor • 1 Year Manufacturer Warranty for Device and 6 Months for In-Box Accessories ₹16,999 ₹20,999 19% off Upto ₹12,600 Off on Exchange Bank Offer" [ref=f1e1136] [cursor=pointer]:
+          - /url: /samsung-galaxy-f70e-5g-limelight-green-128-gb/p/itm639bb81aa42d9?pid=MOBHMGHQ9NY7Q4JR&lid=LSTMOBHMGHQ9NY7Q4JRSUK0XY&marketplace=FLIPKART&q=samsung+5g+mobille&store=tyy%2F4io&srno=s_1_16&otracker=search&otracker1=search&fm=organic&iid=61f66cb7-14cf-4000-a863-80766f009078.MOBHMGHQ9NY7Q4JR.SEARCH&ppt=None&ppn=None&ssid=w79gnxzrwg0000001786541742231&qH=c5ec93b915fcfa28&ov_redirect=true
+          - generic [ref=f1e1137]:
+            - img "Samsung Galaxy F70e 5G (Limelight Green, 128 GB)" [ref=f1e1141]
+            - generic [ref=f1e1142]: Add to Compare
+          - generic [ref=f1e1152]:
+            - generic [ref=f1e1153]:
+              - generic [ref=f1e1154]: Samsung Galaxy F70e 5G (Limelight Green, 128 GB)
+              - generic [ref=f1e1155]:
+                - generic [ref=f1e1156]: "4.2"
+                - generic [ref=f1e1159]: 6,697 Ratings & 736 Reviews
+              - list [ref=f1e1162]:
+                - listitem [ref=f1e1163]: • 6 GB RAM | 128 GB ROM | Expandable Upto 2 TB
+                - listitem [ref=f1e1164]: • 17.12 cm (6.74 inch) HD+ Display
+                - listitem [ref=f1e1165]: • 50MP + 2MP | 8MP Front Camera
+                - listitem [ref=f1e1166]: • 6000 mAh Li-ion Battery
+                - listitem [ref=f1e1167]: • Dimensity 6300 Processor
+                - listitem [ref=f1e1168]: • 1 Year Manufacturer Warranty for Device and 6 Months for In-Box Accessories
+            - generic [ref=f1e1169]:
+              - generic [ref=f1e1171]:
+                - generic [ref=f1e1172]: ₹16,999
+                - generic [ref=f1e1173]: ₹20,999
+                - generic [ref=f1e1174]: 19% off
+              - generic [ref=f1e1178]:
+                - generic [ref=f1e1179]: Upto
+                - generic [ref=f1e1180]: ₹12,600
+                - generic [ref=f1e1181]: Off on Exchange
+              - generic [ref=f1e1182]: Bank Offer
+        - link "Samsung M06 5G (Sage Green, 128 GB) Add to Compare Samsung M06 5G (Sage Green, 128 GB) 4.1 2,329 Ratings & 165 Reviews • 6 GB RAM | 128 GB ROM • 17.02 cm (6.7 inch) Display • 50MP Rear Camera • 5000 mAh Battery • 1 Year Manufacturer Warranty for Phone and 6 Months Warranty for In the Box Accessories ₹16,835 ₹18,999 11% off Only few left Bank Offer" [ref=f1e1189] [cursor=pointer]:
+          - /url: /samsung-m06-5g-sage-green-128-gb/p/itmcafa42dadc15c?pid=MOBH9UYF3VCXJ279&lid=LSTMOBH9UYF3VCXJ279J8OCEX&marketplace=FLIPKART&q=samsung+5g+mobille&store=tyy%2F4io&srno=s_1_17&otracker=search&otracker1=search&fm=organic&iid=61f66cb7-14cf-4000-a863-80766f009078.MOBH9UYF3VCXJ279.SEARCH&ppt=None&ppn=None&ssid=w79gnxzrwg0000001786541742231&qH=c5ec93b915fcfa28&ov_redirect=true
+          - generic [ref=f1e1190]:
+            - img "Samsung M06 5G (Sage Green, 128 GB)" [ref=f1e1194]
+            - generic [ref=f1e1195]: Add to Compare
+          - generic [ref=f1e1205]:
+            - generic [ref=f1e1206]:
+              - generic [ref=f1e1207]: Samsung M06 5G (Sage Green, 128 GB)
+              - generic [ref=f1e1208]:
+                - generic [ref=f1e1209]: "4.1"
+                - generic [ref=f1e1212]: 2,329 Ratings & 165 Reviews
+              - list [ref=f1e1215]:
+                - listitem [ref=f1e1216]: • 6 GB RAM | 128 GB ROM
+                - listitem [ref=f1e1217]: • 17.02 cm (6.7 inch) Display
+                - listitem [ref=f1e1218]: • 50MP Rear Camera
+                - listitem [ref=f1e1219]: • 5000 mAh Battery
+                - listitem [ref=f1e1220]: • 1 Year Manufacturer Warranty for Phone and 6 Months Warranty for In the Box Accessories
+            - generic [ref=f1e1221]:
+              - generic [ref=f1e1223]:
+                - generic [ref=f1e1224]: ₹16,835
+                - generic [ref=f1e1225]: ₹18,999
+                - generic [ref=f1e1226]: 11% off
+              - generic [ref=f1e1229]: Only few left
+              - generic [ref=f1e1232]: Bank Offer
+        - link "Samsung Galaxy F36 5G (Black, 128 GB) Add to Compare Samsung Galaxy F36 5G (Black, 128 GB) 4.2 6,814 Ratings & 604 Reviews • 8 GB RAM | 128 GB ROM | Expandable Upto 2 TB • 17.02 cm (6.7 inch) Full HD+ Display • 50MP + 8MP + 2MP | 13MP Front Camera • 5000 mAh Battery • Samsung Exynos 1380 Processor • 1 Year Manufacturer Warranty for Device and 6 Months for In-Box Accessories ₹22,999 ₹26,999 14% off Top Discount of the Sale Only few left" [ref=f1e1239] [cursor=pointer]:
+          - /url: /samsung-galaxy-f36-5g-black-128-gb/p/itma26d01a0d3111?pid=MOBHMWFXHYJFFFWG&lid=LSTMOBHMWFXHYJFFFWGVWKWRG&marketplace=FLIPKART&q=samsung+5g+mobille&store=tyy%2F4io&srno=s_1_18&otracker=search&otracker1=search&fm=organic&iid=61f66cb7-14cf-4000-a863-80766f009078.MOBHMWFXHYJFFFWG.SEARCH&ppt=None&ppn=None&ssid=w79gnxzrwg0000001786541742231&qH=c5ec93b915fcfa28&ov_redirect=true
+          - generic [ref=f1e1240]:
+            - img "Samsung Galaxy F36 5G (Black, 128 GB)" [ref=f1e1244]
+            - generic [ref=f1e1245]: Add to Compare
+          - generic [ref=f1e1255]:
+            - generic [ref=f1e1256]:
+              - generic [ref=f1e1257]: Samsung Galaxy F36 5G (Black, 128 GB)
+              - generic [ref=f1e1258]:
+                - generic [ref=f1e1259]: "4.2"
+                - generic [ref=f1e1262]: 6,814 Ratings & 604 Reviews
+              - list [ref=f1e1265]:
+                - listitem [ref=f1e1266]: • 8 GB RAM | 128 GB ROM | Expandable Upto 2 TB
+                - listitem [ref=f1e1267]: • 17.02 cm (6.7 inch) Full HD+ Display
+                - listitem [ref=f1e1268]: • 50MP + 8MP + 2MP | 13MP Front Camera
+                - listitem [ref=f1e1269]: • 5000 mAh Battery
+                - listitem [ref=f1e1270]: • Samsung Exynos 1380 Processor
+                - listitem [ref=f1e1271]: • 1 Year Manufacturer Warranty for Device and 6 Months for In-Box Accessories
+            - generic [ref=f1e1272]:
+              - generic [ref=f1e1274]:
+                - generic [ref=f1e1275]: ₹22,999
+                - generic [ref=f1e1276]: ₹26,999
+                - generic [ref=f1e1277]: 14% off
+              - generic [ref=f1e1280]: Top Discount of the Sale
+              - generic [ref=f1e1283]: Only few left
+        - link "Samsung Galaxy M17e (Vibe Violet, 128 GB) Add to Compare Samsung Galaxy M17e (Vibe Violet, 128 GB) 4.1 614 Ratings & 55 Reviews • 6 GB RAM | 128 GB ROM | Expandable Upto 128 GB • 17.02 cm (6.7 inch) Full HD+ Display • 50MP Rear Camera | 2MP Front Camera • 6000 mAh Battery • MediaTek Dimensity Processor • 1-year manufacturer warranty for the device and 6 months for in-box accessories. ₹17,400 ₹20,999 17% off Only few left Upto ₹15,100 Off on Exchange" [ref=f1e1290] [cursor=pointer]:
+          - /url: /samsung-galaxy-m17e-vibe-violet-128-gb/p/itm673a019f689ae?pid=MOBHHQWGFRUKCEC3&lid=LSTMOBHHQWGFRUKCEC3QRKOJ1&marketplace=FLIPKART&q=samsung+5g+mobille&store=tyy%2F4io&srno=s_1_19&otracker=search&otracker1=search&fm=organic&iid=61f66cb7-14cf-4000-a863-80766f009078.MOBHHQWGFRUKCEC3.SEARCH&ppt=None&ppn=None&ssid=w79gnxzrwg0000001786541742231&qH=c5ec93b915fcfa28&ov_redirect=true
+          - generic [ref=f1e1291]:
+            - img "Samsung Galaxy M17e (Vibe Violet, 128 GB)" [ref=f1e1295]
+            - generic [ref=f1e1296]: Add to Compare
+          - generic [ref=f1e1306]:
+            - generic [ref=f1e1307]:
+              - generic [ref=f1e1308]: Samsung Galaxy M17e (Vibe Violet, 128 GB)
+              - generic [ref=f1e1309]:
+                - generic [ref=f1e1310]: "4.1"
+                - generic [ref=f1e1313]: 614 Ratings & 55 Reviews
+              - list [ref=f1e1316]:
+                - listitem [ref=f1e1317]: • 6 GB RAM | 128 GB ROM | Expandable Upto 128 GB
+                - listitem [ref=f1e1318]: • 17.02 cm (6.7 inch) Full HD+ Display
+                - listitem [ref=f1e1319]: • 50MP Rear Camera | 2MP Front Camera
+                - listitem [ref=f1e1320]: • 6000 mAh Battery
+                - listitem [ref=f1e1321]: • MediaTek Dimensity Processor
+                - listitem [ref=f1e1322]: • 1-year manufacturer warranty for the device and 6 months for in-box accessories.
+            - generic [ref=f1e1323]:
+              - generic [ref=f1e1325]:
+                - generic [ref=f1e1326]: ₹17,400
+                - generic [ref=f1e1327]: ₹20,999
+                - generic [ref=f1e1328]: 17% off
+              - generic [ref=f1e1331]: Only few left
+              - generic [ref=f1e1335]:
+                - generic [ref=f1e1336]: Upto
+                - generic [ref=f1e1337]: ₹15,100
+                - generic [ref=f1e1338]: Off on Exchange
+        - link "Samsung Galaxy M17 5G (Moonlight Silver, 128 GB) Add to Compare Samsung Galaxy M17 5G (Moonlight Silver, 128 GB) 4.4 1,362 Ratings & 82 Reviews • 6 GB RAM | 128 GB ROM • 17.02 cm (6.7 inch) Display • 50MP Rear Camera • 5000 mAh Battery • 1 year manufacturer warranty for device and 6 months manufacturer warranty for in-box accessories including batteries from the date of purchase ₹19,375 ₹23,999 19% off Only few left Bank Offer" [ref=f1e1343] [cursor=pointer]:
+          - /url: /samsung-galaxy-m17-5g-moonlight-silver-128-gb/p/itmc3b8f7b511eca?pid=MOBHGU9DYEBQW6NW&lid=LSTMOBHGU9DYEBQW6NW3CI1MX&marketplace=FLIPKART&q=samsung+5g+mobille&store=tyy%2F4io&srno=s_1_20&otracker=search&otracker1=search&fm=organic&iid=61f66cb7-14cf-4000-a863-80766f009078.MOBHGU9DYEBQW6NW.SEARCH&ppt=None&ppn=None&ssid=w79gnxzrwg0000001786541742231&qH=c5ec93b915fcfa28&ov_redirect=true
+          - generic [ref=f1e1344]:
+            - img "Samsung Galaxy M17 5G (Moonlight Silver, 128 GB)" [ref=f1e1348]
+            - generic [ref=f1e1349]: Add to Compare
+          - generic [ref=f1e1359]:
+            - generic [ref=f1e1360]:
+              - generic [ref=f1e1361]: Samsung Galaxy M17 5G (Moonlight Silver, 128 GB)
+              - generic [ref=f1e1362]:
+                - generic [ref=f1e1363]: "4.4"
+                - generic [ref=f1e1366]: 1,362 Ratings & 82 Reviews
+              - list [ref=f1e1369]:
+                - listitem [ref=f1e1370]: • 6 GB RAM | 128 GB ROM
+                - listitem [ref=f1e1371]: • 17.02 cm (6.7 inch) Display
+                - listitem [ref=f1e1372]: • 50MP Rear Camera
+                - listitem [ref=f1e1373]: • 5000 mAh Battery
+                - listitem [ref=f1e1374]: • 1 year manufacturer warranty for device and 6 months manufacturer warranty for in-box accessories including batteries from the date of purchase
+            - generic [ref=f1e1375]:
+              - generic [ref=f1e1377]:
+                - generic [ref=f1e1378]: ₹19,375
+                - generic [ref=f1e1379]: ₹23,999
+                - generic [ref=f1e1380]: 19% off
+              - generic [ref=f1e1383]: Only few left
+              - generic [ref=f1e1386]: Bank Offer
+        - link "Samsung Galaxy M17e (Blitz Blue, 128 GB) Add to Compare Samsung Galaxy M17e (Blitz Blue, 128 GB) 4.1 614 Ratings & 55 Reviews • 6 GB RAM | 128 GB ROM | Expandable Upto 128 GB • 17.02 cm (6.7 inch) Full HD+ Display • 50MP Rear Camera | 2MP Front Camera • 6000 mAh Battery • MediaTek Dimensity Processor • 1-year manufacturer warranty for the device and 6 months for in-box accessories. ₹16,999 ₹20,999 19% off Only 1 left Upto ₹12,600 Off on Exchange" [ref=f1e1393] [cursor=pointer]:
+          - /url: /samsung-galaxy-m17e-blitz-blue-128-gb/p/itm673a019f689ae?pid=MOBHHQW4UQZBUSRP&lid=LSTMOBHHQW4UQZBUSRPUGRWQF&marketplace=FLIPKART&q=samsung+5g+mobille&store=tyy%2F4io&srno=s_1_21&otracker=search&otracker1=search&fm=organic&iid=61f66cb7-14cf-4000-a863-80766f009078.MOBHHQW4UQZBUSRP.SEARCH&ppt=None&ppn=None&ssid=w79gnxzrwg0000001786541742231&qH=c5ec93b915fcfa28&ov_redirect=true
+          - generic [ref=f1e1394]:
+            - img "Samsung Galaxy M17e (Blitz Blue, 128 GB)" [ref=f1e1398]
+            - generic [ref=f1e1399]: Add to Compare
+          - generic [ref=f1e1409]:
+            - generic [ref=f1e1410]:
+              - generic [ref=f1e1411]: Samsung Galaxy M17e (Blitz Blue, 128 GB)
+              - generic [ref=f1e1412]:
+                - generic [ref=f1e1413]: "4.1"
+                - generic [ref=f1e1416]: 614 Ratings & 55 Reviews
+              - list [ref=f1e1419]:
+                - listitem [ref=f1e1420]: • 6 GB RAM | 128 GB ROM | Expandable Upto 128 GB
+                - listitem [ref=f1e1421]: • 17.02 cm (6.7 inch) Full HD+ Display
+                - listitem [ref=f1e1422]: • 50MP Rear Camera | 2MP Front Camera
+                - listitem [ref=f1e1423]: • 6000 mAh Battery
+                - listitem [ref=f1e1424]: • MediaTek Dimensity Processor
+                - listitem [ref=f1e1425]: • 1-year manufacturer warranty for the device and 6 months for in-box accessories.
+            - generic [ref=f1e1426]:
+              - generic [ref=f1e1428]:
+                - generic [ref=f1e1429]: ₹16,999
+                - generic [ref=f1e1430]: ₹20,999
+                - generic [ref=f1e1431]: 19% off
+              - generic [ref=f1e1434]: Only 1 left
+              - generic [ref=f1e1438]:
+                - generic [ref=f1e1439]: Upto
+                - generic [ref=f1e1440]: ₹12,600
+                - generic [ref=f1e1441]: Off on Exchange
+        - link "Samsung Galaxy F16 5G (Vibing Blue, 128 GB) Add to Compare Samsung Galaxy F16 5G (Vibing Blue, 128 GB) 4.2 10,440 Ratings & 812 Reviews • 6 GB RAM | 128 GB ROM • 16.91 cm (6.657 inch) Full HD+ Display • 50MP + 5MP + 2MP | 13MP Front Camera • 5000 mAh Battery • Dimensity 6300 Processor • 1 Year Manufacturer Warranty for Device and 6 Months for In-Box Accessories ₹13,999 ₹17,499 20% off Upto ₹11,750 Off on Exchange Bank Offer" [ref=f1e1446] [cursor=pointer]:
+          - /url: /samsung-galaxy-f16-5g-vibing-blue-128-gb/p/itmc59882b14985a?pid=MOBH9ASG42S7QZ6P&lid=LSTMOBH9ASG42S7QZ6PM3IJJ8&marketplace=FLIPKART&q=samsung+5g+mobille&store=tyy%2F4io&srno=s_1_22&otracker=search&otracker1=search&fm=organic&iid=61f66cb7-14cf-4000-a863-80766f009078.MOBH9ASG42S7QZ6P.SEARCH&ppt=None&ppn=None&ssid=w79gnxzrwg0000001786541742231&qH=c5ec93b915fcfa28&ov_redirect=true
+          - generic [ref=f1e1447]:
+            - img "Samsung Galaxy F16 5G (Vibing Blue, 128 GB)" [ref=f1e1451]
+            - generic [ref=f1e1452]: Add to Compare
+          - generic [ref=f1e1462]:
+            - generic [ref=f1e1463]:
+              - generic [ref=f1e1464]: Samsung Galaxy F16 5G (Vibing Blue, 128 GB)
+              - generic [ref=f1e1465]:
+                - generic [ref=f1e1466]: "4.2"
+                - generic [ref=f1e1469]: 10,440 Ratings & 812 Reviews
+              - list [ref=f1e1472]:
+                - listitem [ref=f1e1473]: • 6 GB RAM | 128 GB ROM
+                - listitem [ref=f1e1474]: • 16.91 cm (6.657 inch) Full HD+ Display
+                - listitem [ref=f1e1475]: • 50MP + 5MP + 2MP | 13MP Front Camera
+                - listitem [ref=f1e1476]: • 5000 mAh Battery
+                - listitem [ref=f1e1477]: • Dimensity 6300 Processor
+                - listitem [ref=f1e1478]: • 1 Year Manufacturer Warranty for Device and 6 Months for In-Box Accessories
+            - generic [ref=f1e1479]:
+              - generic [ref=f1e1481]:
+                - generic [ref=f1e1482]: ₹13,999
+                - generic [ref=f1e1483]: ₹17,499
+                - generic [ref=f1e1484]: 20% off
+              - generic [ref=f1e1488]:
+                - generic [ref=f1e1489]: Upto
+                - generic [ref=f1e1490]: ₹11,750
+                - generic [ref=f1e1491]: Off on Exchange
+              - generic [ref=f1e1492]: Bank Offer
+        - link "Samsung Galaxy A06 5G (Light Gray, 128 GB) Currently unavailable Add to Compare Samsung Galaxy A06 5G (Light Gray, 128 GB) 4.1 4,466 Ratings & 327 Reviews • 4 GB RAM | 128 GB ROM | Expandable Upto 1 TB • 17.02 cm (6.7 inch) HD+ Display • 50MP + 50MP | 2MP + 2MP Dual Front Camera • 5000 mAh Battery • MEDIATEK Processor • 1 Year Manufacturer Warranty for Device and 6 Months for In-Box Accessories ₹9,999 ₹15,499 35% off Upto ₹8,300 Off on Exchange Bank Offer" [ref=f1e1499] [cursor=pointer]:
+          - /url: /samsung-galaxy-a06-5g-light-gray-128-gb/p/itm96b00d665631f?pid=MOBH9YKVTKYHQGHG&lid=LSTMOBH9YKVTKYHQGHGHYJ95R&marketplace=FLIPKART&q=samsung+5g+mobille&store=tyy%2F4io&srno=s_1_23&otracker=search&otracker1=search&fm=organic&iid=61f66cb7-14cf-4000-a863-80766f009078.MOBH9YKVTKYHQGHG.SEARCH&ppt=None&ppn=None&ssid=w79gnxzrwg0000001786541742231&qH=c5ec93b915fcfa28&ov_redirect=true
+          - generic [ref=f1e1500]:
+            - generic [ref=f1e1501]:
+              - img "Samsung Galaxy A06 5G (Light Gray, 128 GB)" [ref=f1e1504]
+              - generic: Currently unavailable
+            - generic [ref=f1e1505]: Add to Compare
+          - generic [ref=f1e1515]:
+            - generic [ref=f1e1516]:
+              - generic [ref=f1e1517]: Samsung Galaxy A06 5G (Light Gray, 128 GB)
+              - generic [ref=f1e1518]:
+                - generic [ref=f1e1519]: "4.1"
+                - generic [ref=f1e1522]: 4,466 Ratings & 327 Reviews
+              - list [ref=f1e1525]:
+                - listitem [ref=f1e1526]: • 4 GB RAM | 128 GB ROM | Expandable Upto 1 TB
+                - listitem [ref=f1e1527]: • 17.02 cm (6.7 inch) HD+ Display
+                - listitem [ref=f1e1528]: • 50MP + 50MP | 2MP + 2MP Dual Front Camera
+                - listitem [ref=f1e1529]: • 5000 mAh Battery
+                - listitem [ref=f1e1530]: • MEDIATEK Processor
+                - listitem [ref=f1e1531]: • 1 Year Manufacturer Warranty for Device and 6 Months for In-Box Accessories
+            - generic [ref=f1e1532]:
+              - generic [ref=f1e1534]:
+                - generic [ref=f1e1535]: ₹9,999
+                - generic [ref=f1e1536]: ₹15,499
+                - generic [ref=f1e1537]: 35% off
+              - generic [ref=f1e1541]:
+                - generic [ref=f1e1542]: Upto
+                - generic [ref=f1e1543]: ₹8,300
+                - generic [ref=f1e1544]: Off on Exchange
+              - generic [ref=f1e1545]: Bank Offer
+        - link "Samsung Galaxy F70 Pro 5G (Alpha Black, 128 GB) Add to Compare Samsung Galaxy F70 Pro 5G (Alpha Black, 128 GB) 4.4 27 Ratings & 11 Reviews • 8 GB RAM | 128 GB ROM • 17.02 cm (6.7 inch) Full HD+ Display • 50MP + 5MP | 12MP Front Camera • 6000 mAh Li-ion Battery • Snapdragon 6 Gen 3 Processor • 1 Year Manufacturer Warranty for Device and 6 Months for In-Box Accessories ₹27,999 ₹49,999 44% off Upto ₹20,700 Off on Exchange Bank Offer" [ref=f1e1552] [cursor=pointer]:
+          - /url: /samsung-galaxy-f70-pro-5g-alpha-black-128-gb/p/itm37bbb9ed78024?pid=MOBHZ8YSUXXHYGBR&lid=LSTMOBHZ8YSUXXHYGBRWANADK&marketplace=FLIPKART&q=samsung+5g+mobille&store=tyy%2F4io&srno=s_1_24&otracker=search&otracker1=search&fm=organic&iid=61f66cb7-14cf-4000-a863-80766f009078.MOBHZ8YSUXXHYGBR.SEARCH&ppt=None&ppn=None&ssid=w79gnxzrwg0000001786541742231&qH=c5ec93b915fcfa28&ov_redirect=true
+          - generic [ref=f1e1553]:
+            - img "Samsung Galaxy F70 Pro 5G (Alpha Black, 128 GB)" [ref=f1e1557]
+            - generic [ref=f1e1558]: Add to Compare
+          - generic [ref=f1e1568]:
+            - generic [ref=f1e1569]:
+              - generic [ref=f1e1570]: Samsung Galaxy F70 Pro 5G (Alpha Black, 128 GB)
+              - generic [ref=f1e1571]:
+                - generic [ref=f1e1572]: "4.4"
+                - generic [ref=f1e1575]: 27 Ratings & 11 Reviews
+              - list [ref=f1e1578]:
+                - listitem [ref=f1e1579]: • 8 GB RAM | 128 GB ROM
+                - listitem [ref=f1e1580]: • 17.02 cm (6.7 inch) Full HD+ Display
+                - listitem [ref=f1e1581]: • 50MP + 5MP | 12MP Front Camera
+                - listitem [ref=f1e1582]: • 6000 mAh Li-ion Battery
+                - listitem [ref=f1e1583]: • Snapdragon 6 Gen 3 Processor
+                - listitem [ref=f1e1584]: • 1 Year Manufacturer Warranty for Device and 6 Months for In-Box Accessories
+            - generic [ref=f1e1585]:
+              - generic [ref=f1e1587]:
+                - generic [ref=f1e1588]: ₹27,999
+                - generic [ref=f1e1589]: ₹49,999
+                - generic [ref=f1e1590]: 44% off
+              - generic [ref=f1e1594]:
+                - generic [ref=f1e1595]: Upto
+                - generic [ref=f1e1596]: ₹20,700
+                - generic [ref=f1e1597]: Off on Exchange
+              - generic [ref=f1e1598]: Bank Offer
+        - generic [ref=f1e1603]:
+          - generic [ref=f1e1604]: Page 1 of 47
+          - navigation [ref=f1e1605]:
+            - link "1" [ref=f1e1606] [cursor=pointer]:
+              - /url: /search?q=samsung+5g+mobille&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=1
+            - link "2" [ref=f1e1607] [cursor=pointer]:
+              - /url: /search?q=samsung+5g+mobille&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=2
+            - link "3" [ref=f1e1608] [cursor=pointer]:
+              - /url: /search?q=samsung+5g+mobille&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=3
+            - link "4" [ref=f1e1609] [cursor=pointer]:
+              - /url: /search?q=samsung+5g+mobille&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=4
+            - link "5" [ref=f1e1610] [cursor=pointer]:
+              - /url: /search?q=samsung+5g+mobille&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=5
+            - link "6" [ref=f1e1611] [cursor=pointer]:
+              - /url: /search?q=samsung+5g+mobille&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=6
+            - link "7" [ref=f1e1612] [cursor=pointer]:
+              - /url: /search?q=samsung+5g+mobille&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=7
+            - link "8" [ref=f1e1613] [cursor=pointer]:
+              - /url: /search?q=samsung+5g+mobille&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=8
+            - link "9" [ref=f1e1614] [cursor=pointer]:
+              - /url: /search?q=samsung+5g+mobille&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=9
+            - link "10" [ref=f1e1615] [cursor=pointer]:
+              - /url: /search?q=samsung+5g+mobille&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=10
+            - link "Next" [ref=f1e1616] [cursor=pointer]:
+              - /url: /search?q=samsung+5g+mobille&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=2
+        - generic [ref=f1e1618]:
+          - text: Did you find what you were looking for?
+          - generic [ref=f1e1619]:
+            - generic [ref=f1e1620] [cursor=pointer]: "Yes"
+            - generic [ref=f1e1621] [cursor=pointer]: "No"
+    - generic [ref=f1e1623]:
+      - generic [ref=f1e1624]: Reviews for Popular Samsung 5g Mobile
+      - generic [ref=f1e1625]:
+        - generic [ref=f1e1626]:
+          - generic [ref=f1e1628]:
+            - img "Samsung Galaxy F36 5G (Black, 128 GB)"
+          - generic [ref=f1e1629]:
+            - link "1. Samsung Galaxy F36 5G (Blac... 4.2 6,814 Ratings&604 Reviews ₹22,999 14% off" [ref=f1e1630] [cursor=pointer]:
+              - /url: /samsung-galaxy-f36-5g-black-128-gb/p/itma26d01a0d3111?pid=MOBHMWFXHYJFFFWG&marketplace=FLIPKART&ov_redirect=true
+              - generic [ref=f1e1631]: 1. Samsung Galaxy F36 5G (Blac...
+              - generic [ref=f1e1633]:
+                - generic [ref=f1e1634]: "4.2"
+                - generic [ref=f1e1636]:
+                  - text: 6,814 Ratings
+                  - generic [ref=f1e1637]: "&604 Reviews"
+              - generic [ref=f1e1639]:
+                - generic [ref=f1e1640]: ₹22,999
+                - generic [ref=f1e1641]: 14% off
+            - list [ref=f1e1642]:
+              - listitem [ref=f1e1643]: 8 GB RAM | 128 GB ROM | Expandable Upto 2 TB
+              - listitem [ref=f1e1644]: 17.02 cm (6.7 inch) Full HD+ Display
+              - listitem [ref=f1e1645]: 50MP + 8MP + 2MP | 13MP Front Camera
+        - generic [ref=f1e1646]:
+          - generic [ref=f1e1647]: Most Helpful Review
+          - generic [ref=f1e1649]:
+            - generic [ref=f1e1650]:
+              - generic [ref=f1e1651]: "4"
+              - paragraph [ref=f1e1653]: Pretty good
+            - generic [ref=f1e1654]: Phone Heating after using 10 mintu
+            - generic [ref=f1e1659]:
+              - paragraph [ref=f1e1660]: Amresh Chowdhury
+              - paragraph [ref=f1e1665]: Certified Buyer
+              - paragraph [ref=f1e1666]: Aug, 2025
+        - generic [ref=f1e1667]:
+          - generic [ref=f1e1668]: Recent Review
+          - generic [ref=f1e1670]:
+            - generic [ref=f1e1671]:
+              - generic [ref=f1e1672]: "5"
+              - paragraph [ref=f1e1674]: Mind-blowing purchase
+            - generic [ref=f1e1675]: Best phones in this budget, Best quality experience
+            - generic [ref=f1e1680]:
+              - paragraph [ref=f1e1681]: Tejas Naik
+              - paragraph [ref=f1e1686]: Certified Buyer
+              - paragraph [ref=f1e1687]: 2 days ago
+      - generic [ref=f1e1688]:
+        - generic [ref=f1e1689]:
+          - generic [ref=f1e1691]:
+            - img "Samsung Galaxy M32 5G (Sky Blue, 128 GB)"
+          - generic [ref=f1e1692]:
+            - link "2. Samsung Galaxy M32 5G (Sky ... 4.1 1,547 Ratings&85 Reviews ₹21,999 15% off" [ref=f1e1693] [cursor=pointer]:
+              - /url: /samsung-galaxy-m32-5g-sky-blue-128-gb/p/itmd9a8bb8647f12?pid=MOBG73CKDGXWGS43&marketplace=FLIPKART&ov_redirect=true
+              - generic [ref=f1e1694]: 2. Samsung Galaxy M32 5G (Sky ...
+              - generic [ref=f1e1696]:
+                - generic [ref=f1e1697]: "4.1"
+                - generic [ref=f1e1699]:
+                  - text: 1,547 Ratings
+                  - generic [ref=f1e1700]: "&85 Reviews"
+              - generic [ref=f1e1702]:
+                - generic [ref=f1e1703]: ₹21,999
+                - generic [ref=f1e1704]: 15% off
+            - list [ref=f1e1705]:
+              - listitem [ref=f1e1706]: 8 GB RAM | 128 GB ROM | Expandable Upto 1 TB
+              - listitem [ref=f1e1707]: 16.51 cm (6.5 inch) HD+ Display
+              - listitem [ref=f1e1708]: 48MP + 8MP + 5MP + 2MP | 13MP Front Camera
+        - generic [ref=f1e1709]:
+          - generic [ref=f1e1710]: Most Helpful Review
+          - generic [ref=f1e1712]:
+            - generic [ref=f1e1713]:
+              - generic [ref=f1e1714]: "5"
+              - paragraph [ref=f1e1716]: Just wow!
+            - generic [ref=f1e1717]: Performance was very Good
+            - generic [ref=f1e1722]:
+              - paragraph [ref=f1e1723]: Madhan Kumar Y
+              - paragraph [ref=f1e1728]: Certified Buyer
+              - paragraph [ref=f1e1729]: Apr, 2022
+        - generic [ref=f1e1730]:
+          - generic [ref=f1e1731]: Recent Review
+          - generic [ref=f1e1733]:
+            - generic [ref=f1e1734]:
+              - generic [ref=f1e1735]: "1"
+              - paragraph [ref=f1e1737]: Unsatisfactory
+            - generic [ref=f1e1738]: Just okkk not so good not so bad...!Cemra is not so good...!
+            - generic [ref=f1e1743]:
+              - paragraph [ref=f1e1744]: Avisekh Verma
+              - paragraph [ref=f1e1749]: Certified Buyer
+              - paragraph [ref=f1e1750]: Jun, 2023
+      - generic [ref=f1e1751]:
+        - generic [ref=f1e1752]:
+          - generic [ref=f1e1754]:
+            - img "Samsung Galaxy M17 5G (Moonlight Silver, 128 GB)"
+          - generic [ref=f1e1755]:
+            - link "3. Samsung Galaxy M17 5G (Moon... 4.4 1,362 Ratings&82 Reviews ₹19,375 19% off" [ref=f1e1756] [cursor=pointer]:
+              - /url: /samsung-galaxy-m17-5g-moonlight-silver-128-gb/p/itmc3b8f7b511eca?pid=MOBHGU9DYEBQW6NW&marketplace=FLIPKART&ov_redirect=true
+              - generic [ref=f1e1757]: 3. Samsung Galaxy M17 5G (Moon...
+              - generic [ref=f1e1759]:
+                - generic [ref=f1e1760]: "4.4"
+                - generic [ref=f1e1762]:
+                  - text: 1,362 Ratings
+                  - generic [ref=f1e1763]: "&82 Reviews"
+              - generic [ref=f1e1765]:
+                - generic [ref=f1e1766]: ₹19,375
+                - generic [ref=f1e1767]: 19% off
+            - list [ref=f1e1768]:
+              - listitem [ref=f1e1769]: 6 GB RAM | 128 GB ROM
+              - listitem [ref=f1e1770]: 17.02 cm (6.7 inch) Display
+              - listitem [ref=f1e1771]: 50MP Rear Camera
+        - generic [ref=f1e1772]:
+          - generic [ref=f1e1773]: Most Helpful Review
+          - generic [ref=f1e1775]:
+            - generic [ref=f1e1776]:
+              - generic [ref=f1e1777]: "4"
+              - paragraph [ref=f1e1779]: Good choice
+            - generic [ref=f1e1780]: In this budget it's good phone
+            - generic [ref=f1e1785]:
+              - paragraph [ref=f1e1786]: Karan Thanvi
+              - paragraph [ref=f1e1791]: Certified Buyer
+              - paragraph [ref=f1e1792]: 4 months ago
+        - generic [ref=f1e1793]:
+          - generic [ref=f1e1794]: Recent Review
+          - generic [ref=f1e1796]:
+            - generic [ref=f1e1797]:
+              - generic [ref=f1e1798]: "2"
+              - paragraph [ref=f1e1800]: Bad quality
+            - generic [ref=f1e1803]:
+              - generic [ref=f1e1804]: Even basic applications aren't working properly; it hangs constantly—and don't even get me started on banking apps. It’s a classic case of "...
+              - generic [ref=f1e1805] [cursor=pointer]: Read full review
+            - generic [ref=f1e1807]:
+              - paragraph [ref=f1e1808]: Vallepu Madhu
+              - paragraph [ref=f1e1813]: Certified Buyer
+              - paragraph [ref=f1e1814]: Today
+      - generic [ref=f1e1815]:
+        - generic [ref=f1e1816]:
+          - generic [ref=f1e1818]:
+            - img "Samsung Galaxy M17e (Vibe Violet, 128 GB)"
+          - generic [ref=f1e1819]:
+            - link "4. Samsung Galaxy M17e (Vibe V... 4 651 Ratings&58 Reviews ₹15,144 20% off" [ref=f1e1820] [cursor=pointer]:
+              - /url: /samsung-galaxy-m17e-vibe-violet-128-gb/p/itm1b5a0ea459581?pid=MOBHHQUDATUWHVGA&marketplace=FLIPKART&ov_redirect=true
+              - generic [ref=f1e1821]: 4. Samsung Galaxy M17e (Vibe V...
+              - generic [ref=f1e1823]:
+                - generic [ref=f1e1824]: "4"
+                - generic [ref=f1e1826]:
+                  - text: 651 Ratings
+                  - generic [ref=f1e1827]: "&58 Reviews"
+              - generic [ref=f1e1829]:
+                - generic [ref=f1e1830]: ₹15,144
+                - generic [ref=f1e1831]: 20% off
+            - list [ref=f1e1832]:
+              - listitem [ref=f1e1833]: 4 GB RAM | 128 GB ROM | Expandable Upto 128 GB
+              - listitem [ref=f1e1834]: 17.02 cm (6.7 inch) Full HD+ Display
+              - listitem [ref=f1e1835]: 50MP Rear Camera | 2MP Front Camera
+        - generic [ref=f1e1836]:
+          - generic [ref=f1e1837]: Most Helpful Review
+          - generic [ref=f1e1839]:
+            - generic [ref=f1e1840]:
+              - generic [ref=f1e1841]: "4"
+              - paragraph [ref=f1e1843]: Good quality product
+            - generic [ref=f1e1846]:
+              - generic [ref=f1e1847]: Samsung galaxy M17e is average Mobile Phone Camera - Not good for Click Photos Performance - Good 👍 Build Quality - It's Sleepy try to use Case Or Cover...
+              - generic [ref=f1e1848] [cursor=pointer]: Read full review
+            - generic [ref=f1e1850]:
+              - paragraph [ref=f1e1851]: Rohan Singh
+              - paragraph [ref=f1e1856]: Certified Buyer
+              - paragraph [ref=f1e1857]: 2 months ago
+        - generic [ref=f1e1858]:
+          - generic [ref=f1e1859]: Recent Review
+          - generic [ref=f1e1861]:
+            - generic [ref=f1e1862]:
+              - generic [ref=f1e1863]: "5"
+              - paragraph [ref=f1e1865]: Excellent
+            - generic [ref=f1e1866]: Thank you Samsung In this budget segment it's hard to find a phone with such great features and a 6000 mAh battery Really impressed thank you Samsung
+            - generic [ref=f1e1871]:
+              - paragraph [ref=f1e1872]: Iram Firdos
+              - paragraph [ref=f1e1877]: Certified Buyer
+              - paragraph [ref=f1e1878]: 5 days ago
+      - generic [ref=f1e1879]:
+        - generic [ref=f1e1880]:
+          - generic [ref=f1e1882]:
+            - img "Samsung M06 5G (Blazing Black, 128 GB)"
+          - generic [ref=f1e1883]:
+            - link "5. Samsung M06 5G (Blazing Bla... 4.1 5,058 Ratings&341 Reviews ₹14,429 15% off" [ref=f1e1884] [cursor=pointer]:
+              - /url: /samsung-m06-5g-blazing-black-128-gb/p/itmcafa42dadc15c?pid=MOBH9UYF4GZXGWW6&marketplace=FLIPKART&ov_redirect=true
+              - generic [ref=f1e1885]: 5. Samsung M06 5G (Blazing Bla...
+              - generic [ref=f1e1887]:
+                - generic [ref=f1e1888]: "4.1"
+                - generic [ref=f1e1890]:
+                  - text: 5,058 Ratings
+                  - generic [ref=f1e1891]: "&341 Reviews"
+              - generic [ref=f1e1893]:
+                - generic [ref=f1e1894]: ₹14,429
+                - generic [ref=f1e1895]: 15% off
+            - list [ref=f1e1896]:
+              - listitem [ref=f1e1897]: 4 GB RAM | 128 GB ROM
+              - listitem [ref=f1e1898]: 17.02 cm (6.7 inch) Display
+              - listitem [ref=f1e1899]: 50MP Rear Camera
+        - generic [ref=f1e1900]:
+          - generic [ref=f1e1901]: Most Helpful Review
+          - generic [ref=f1e1903]:
+            - generic [ref=f1e1904]:
+              - generic [ref=f1e1905]: "5"
+              - paragraph [ref=f1e1907]: Terrific purchase
+            - generic [ref=f1e1908]: Good looking...thank you filpkart
+            - generic [ref=f1e1913]:
+              - paragraph [ref=f1e1914]: Animesh Naskar
+              - paragraph [ref=f1e1919]: Certified Buyer
+              - paragraph [ref=f1e1920]: May, 2025
+        - generic [ref=f1e1921]:
+          - generic [ref=f1e1922]: Recent Review
+          - generic [ref=f1e1924]:
+            - generic [ref=f1e1925]:
+              - generic [ref=f1e1926]: "1"
+              - paragraph [ref=f1e1928]: Hated it!
+            - generic [ref=f1e1929]: Very bad mobile don't buy
+            - generic [ref=f1e1934]:
+              - paragraph [ref=f1e1935]: Flipkart Customer
+              - paragraph [ref=f1e1940]: Certified Buyer
+              - paragraph [ref=f1e1941]: Today
+  - contentinfo [ref=f1e1942]:
+    - generic [ref=f1e1944]:
+      - generic [ref=f1e1945]:
+        - generic [ref=f1e1946]:
+          - generic [ref=f1e1947]: ABOUT
+          - link "Contact Us" [ref=f1e1948] [cursor=pointer]:
+            - /url: /helpcentre?otracker=footer_navlinks
+          - link "About Us" [ref=f1e1949] [cursor=pointer]:
+            - /url: https://corporate.flipkart.net/corporate-home
+          - link "Careers" [ref=f1e1950] [cursor=pointer]:
+            - /url: https://www.flipkartcareers.com/?otracker=footer_navlinks
+          - link "Flipkart Stories" [ref=f1e1951] [cursor=pointer]:
+            - /url: http://stories.flipkart.com/?otracker=footer_navlinks
+          - link "Press" [ref=f1e1952] [cursor=pointer]:
+            - /url: http://stories.flipkart.com/category/top-stories/news/
+          - link "Corporate Information" [ref=f1e1953] [cursor=pointer]:
+            - /url: /corporate-information
+        - generic [ref=f1e1954]:
+          - generic [ref=f1e1955]: GROUP COMPANIES
+          - link "Myntra" [ref=f1e1956] [cursor=pointer]:
+            - /url: https://www.myntra.com/
+          - link "Cleartrip" [ref=f1e1957] [cursor=pointer]:
+            - /url: https://www.cleartrip.com/
+          - link "Shopsy" [ref=f1e1958] [cursor=pointer]:
+            - /url: https://www.shopsy.in/
+        - generic [ref=f1e1959]:
+          - generic [ref=f1e1960]: HELP
+          - link "Payments" [ref=f1e1961] [cursor=pointer]:
+            - /url: /pages/payments
+          - link "Shipping" [ref=f1e1962] [cursor=pointer]:
+            - /url: /pages/shipping
+          - link "Cancellation & Returns" [ref=f1e1963] [cursor=pointer]:
+            - /url: /helpcentre?catalog=55c9c6edb000002e002c1701&view=CATALOG
+          - link "FAQ" [ref=f1e1964] [cursor=pointer]:
+            - /url: /helpcentre?catalog=55c9c8e2b0000023002c1702&view=CATALOG
+        - generic [ref=f1e1965]:
+          - generic [ref=f1e1966]: CONSUMER POLICY
+          - link "Cancellation & Returns" [ref=f1e1967] [cursor=pointer]:
+            - /url: /pages/returnpolicy?otracker=footer_navlinks
+          - link "Terms Of Use" [ref=f1e1968] [cursor=pointer]:
+            - /url: /pages/terms?otracker=footer_navlinks
+          - link "Security" [ref=f1e1969] [cursor=pointer]:
+            - /url: /pages/paymentsecurity?otracker=footer_navlinks
+          - link "Privacy" [ref=f1e1970] [cursor=pointer]:
+            - /url: /pages/privacypolicy?otracker=footer_navlinks
+          - link "Sitemap" [ref=f1e1971] [cursor=pointer]:
+            - /url: /sitemap?otracker=footer_navlinks
+          - link "Grievance Redressal" [ref=f1e1972] [cursor=pointer]:
+            - /url: /pages/grievance-redressal-mechanism?otracker=footer_navlinks
+          - link "EPR Compliance" [ref=f1e1973] [cursor=pointer]:
+            - /url: /pages/ewaste-compliance-tnc?otracker=footer_navlinks
+          - link "FSSAI Food Safety Connect App" [ref=f1e1974] [cursor=pointer]:
+            - /url: https://fssai.gov.in/cms/food-safety-connect.php
+        - generic [ref=f1e1976]:
+          - generic [ref=f1e1977]: "Mail Us:"
+          - generic [ref=f1e1980]:
+            - paragraph [ref=f1e1981]: Flipkart Internet Private Limited,
+            - paragraph [ref=f1e1982]: Buildings Alyssa, Begonia &
+            - paragraph [ref=f1e1983]: Clove Embassy Tech Village,
+            - paragraph [ref=f1e1984]: Outer Ring Road, Devarabeesanahalli Village,
+            - paragraph [ref=f1e1985]: Bengaluru, 560103,
+            - paragraph [ref=f1e1986]: Karnataka, India
+          - generic [ref=f1e1987]: Social
+          - generic [ref=f1e1988]:
+            - link [ref=f1e1990] [cursor=pointer]:
+              - /url: https://www.facebook.com/flipkart
+            - link [ref=f1e1993] [cursor=pointer]:
+              - /url: https://www.twitter.com/flipkart
+            - link [ref=f1e1996] [cursor=pointer]:
+              - /url: https://www.youtube.com/flipkart
+            - link [ref=f1e1999] [cursor=pointer]:
+              - /url: https://www.instagram.com/flipkart
+        - generic [ref=f1e2002]:
+          - generic [ref=f1e2003]: "Registered Office Address:"
+          - generic [ref=f1e2006]:
+            - paragraph [ref=f1e2007]: Flipkart Internet Private Limited,
+            - paragraph [ref=f1e2008]: Buildings Alyssa, Begonia &
+            - paragraph [ref=f1e2009]: Clove Embassy Tech Village,
+            - paragraph [ref=f1e2010]: Outer Ring Road, Devarabeesanahalli Village,
+            - paragraph [ref=f1e2011]: Bengaluru, 560103,
+            - paragraph [ref=f1e2012]: Karnataka, India
+            - paragraph [ref=f1e2013]: "CIN : U51109KA2012PTC066107"
+            - paragraph [ref=f1e2014]:
+              - text: "Telephone:"
+              - link "044-45614709" [ref=f1e2015] [cursor=pointer]:
+                - /url: tel:044-45614709
+              - text: /
+              - link "044-45714709" [ref=f1e2016] [cursor=pointer]:
+                - /url: tel:044-45714709
+      - generic [ref=f1e2018]:
+        - link "Become a Seller" [ref=f1e2021] [cursor=pointer]:
+          - /url: https://seller.flipkart.com/?utm_source=fkwebsite&utm_medium=websitedirect
+        - generic [ref=f1e2022]: Advertise
+        - link "Gift Cards" [ref=f1e2026] [cursor=pointer]:
+          - /url: /the-gift-card-store?otracker=footer_navlinks
+        - link "Help Center" [ref=f1e2029] [cursor=pointer]:
+          - /url: /helpcentre?otracker=footer_navlinks
+        - generic [ref=f1e2030]: © 2007-2026 Flipkart.com
+```
