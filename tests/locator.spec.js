@@ -5,5 +5,5 @@ test('validate locators', async ({ page }) => {
     await page.locator('//input[@name="pass"]').fill('asddfghjkl')
     await page.locator('//span[text()="Log in"]').click()
     console.log("branch 1")
-    console.log("Hi Buddy")
+    console.log("Allure")
 })
